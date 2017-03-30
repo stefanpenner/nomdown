@@ -4,10 +4,13 @@ Adds `nomnoml` as a highlight language type to marked, and defaults to highlight
 
 [read more about nomnoml](http://www.nomnoml.com/)
 
-## Usage 
-`npm install nomdown`
-`yarn add nomdown`
+## Install 
 
+Either via `npm` or `yarn`:
+* `npm install nomdown`
+* `yarn add nomdown`
+
+## Usage
 
 ```js
 const nomdown = require('nomdown');
@@ -21,8 +24,7 @@ nomdown(string, (err, content) => {
 
 ## Example:
 
-
-Lets you have `nomnoml` code sections like:
+Lets you have `nomnoml` code sections in markdown such as:
 
 ```nomnoml
 #fill: #eeeeee; #ffffff
