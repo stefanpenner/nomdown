@@ -5,6 +5,9 @@
   "repository": "git@github.com:stefanpenner/nomdown",
   "author": "Stefan Penner <stefan.penner@gmail.com>",
   "license": "MIT",
+  "files": [
+    "index.js"
+  ],
   "dependencies": {
     "highlight.js": "^9.10.0",
     "marked": "^0.3.6",
