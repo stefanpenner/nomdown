@@ -12,4 +12,4 @@ marked.setOptions({
   }
 });
 
-modules.export = marked;
+module.export = marked;
