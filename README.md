@@ -25,26 +25,15 @@ nomdown(string, (err, content) => {
 Lets you have `nomnoml` code sections like:
 
 ```nomnoml
-#direction: down
-#.box: fill=#8f8 dashed
-[<box> GreenBox]
-
-
-[Project Start] -> [A Start];
-
-[A Start] added -> [A.1]
-[A.1] -> [A2 Start]
-[A2 Start] -> [A.2.1]
-[A2 Start] -> [A.2.2]
-
-[A.2.2] -> [A.2.3]
-[A.2.3] -> [A.2 Finish]
-
-[A.2.1] -> [A.2 Finish]
-[A.2.1] omg -> [<box> B]
-[A.2 Finish] -> [A Finish]
-[A Finish] -> [Project Finish]
-[<box> B] -> [Project Finish]
+#fill: #eeeeee; #ffffff
+[<frame>Decorator pattern|
+  [<abstract>Component||+ operation()]
+  [Client] depends --> [Component]
+  [Decorator|- next: Component]
+  [Decorator] decorates -- [ConcreteComponent]
+  [Component] <:- [Decorator]
+  [Component] <:- [ConcreteComponent]
+]
 ```
 
 And have them nicely formated (in svg) as:
