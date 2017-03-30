@@ -38,3 +38,4 @@ Lets you have `nomnoml` code sections like:
 
 And have them nicely formated (in svg) as:
 
+<img src="https://raw.githubusercontent.com/stefanpenner/nomdown/master/assets/example.png" height="370px" >
