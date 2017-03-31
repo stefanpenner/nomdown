@@ -1,0 +1,40 @@
+#!/usr/bin/env node
+
+process.title = 'nomdown';
+
+function main(argv, callback) {
+  return new Promise((resolve, reject) => {
+    if (process.argv.length > 2) {
+      let file = process.argv[2];
+      resolve(require('fs').readFileSync(file, 'UTF8'));
+    } else {
+      resolve(getStdin());
+    }
+  }).
+    then(require('../index.js'));
+}
+
+function getStdin(callback) {
+  return new Promise((resolve, reject) => {
+    let stdin = process.stdin;
+    let buff = '';
+
+    stdin.setEncoding('utf8');
+
+    stdin.on('data', data => buff += data);
+    stdin.on('error', reject);
+    stdin.on('end', () => resolve(buff));
+
+    stdin.resume();
+  });
+}
+
+main().
+  then(content => {
+    console.log(content);
+    process.exit(0);
+  }).
+  catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
