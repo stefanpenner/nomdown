@@ -1,4 +1,7 @@
 {
+  "bin": {
+    "nomdown": "./bin/nomdown"
+  },
   "name": "nomdown",
   "version": "1.0.3",
   "main": "index.js",
