@@ -9,7 +9,8 @@
   "author": "Stefan Penner <stefan.penner@gmail.com>",
   "license": "MIT",
   "files": [
-    "index.js"
+    "index.js",
+    "bin/nomdown"
   ],
   "dependencies": {
     "highlight.js": "^9.10.0",
